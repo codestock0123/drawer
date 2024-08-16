@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+  <link rel="stylesheet" href="./">
+</head>
+
+<body>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      <div class="l-header__logo">
+        <a href="/" class="l-header__logoLink">
+          <img src="" alt="">ロゴ
+        </a>
+      </div>
+
+      <nav class="l-header__nav">
+        <ul class="l-header__menu">
+          <li class="l-header__menuItem">
+            <a href="#" class="l-header__menuLink">News</a>
+          </li>
+          <li class="l-header__menuItem">
+            <a href="#" class="l-header__menuLink">Concept</a>
+          </li>
+          <li class="l-header__menuItem">
+            <a href="#" class="l-header__menuLink">Menu</a>
+          </li>
+          <li class="l-header__menuItem">
+            <a href="#" class="l-header__menuLink">Party Plane</a>
+          </li>
+          <li class="l-header__menuItem">
+            <a href="#" class="l-header__menuLink">Contact us</a>
+          </li>
+          <li class="l-header__menuItem">
+            <a href="#" class="l-header__menuLink">Members</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="l-header__snsBox">
+        <a href="#" class="l-header__line">
+          <img src="./assets/images/common/icon_line_black.svg" alt="LINEのリンク" width="31" height="30" class="l-header__lineLogo">
+        </a>
+        <a href="#" class="l-header__insta">
+          <img src="./assets/images/common/icon_insta_black.svg" alt="" width="28" height="28" class="l-header__instaLogo">
+        </a>
+      </div>
+
+      <div class="l-header__hamburgerBtn" onclick="drawerToggle(event, 'drawerMenu')">
+        <div class="l-header__hamburgerBox">
+          <span class="l-header__bar"></span>
+          <span class="l-header__bar"></span>
+          <span class="l-header__bar"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="drawerMenu" class="c-drawerMenu">
+      <div class="c-drawerMenu__inner">
+        <div class="c-drawerMenu__wrap">
+          <div class="c-drawerMenu__topBox">
+            <div class="c-drawerMenu__logo">
+              <a href="/" class="c-drawerMenu__logoLink">
+                <img src="" alt="">ロゴ
+              </a>
+            </div>
+          </div>
+  
+          <nav class="c-drawerMenu__nav">
+            <ul class="c-drawerMenu__menu">
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span class="c-drawerMenu__subText">お知らせ</span>News</a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">コンセプト
+                </span>Concept</a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">メニュー</span>Menu
+                </a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">パーティープラン
+                </span>Party Plane
+                </a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">お問い合わせ
+                </span>Contact us
+                </a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">会員制申し込みページ
+                </span>Members</a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">プライバシーポリシー</span>Privacy＆Policy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <script src="./assets/js/drawer.js"></script>
+
+</body>
+
+</html>

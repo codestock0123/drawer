@@ -1,0 +1,151 @@
+/* c-drawerMenu
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-drawerMenu {
+  display: none;
+  @include g.tabletS {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s .5s ease, visibility 1.2s .5s ease;
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .6s .2s ease, visibility .6s .2s ease;
+
+    &::before {
+      transform: scale(60);
+      transition: transform 0.75s ease-in-out;
+    }
+
+    .c-drawerMenu__inner {
+    }
+
+    .c-drawerMenu__wrap {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .5s .3s ease, visibility .5s .3s ease;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    background: var(--beige);
+    position: absolute;
+    z-index: 1;
+    top: -5vw;
+    right: -5vw;
+    transform: scale(0);
+    transition: transform 1.2s ease-in-out;
+    @media screen and (max-width: 375px) {
+      width: 37.5px;
+      height: 37.5px;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 3;
+    padding: 24.4px 35.2px 217px;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 4;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s .3s ease, visibility .5s .3s ease;
+  }
+
+  &__topBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 37.46px;
+    width: 100%;
+  }
+
+  &__logoLink {
+    display: block;
+    width: 100%;
+  }
+
+  &__logoImg {
+    width: 100%;
+  }
+
+  &__closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32.32px;
+    height: 32.32px;
+    cursor: pointer;
+    margin-right: -8.08px;
+  }
+
+  &__closeIcon {
+    max-width: 16.16px;
+    width: 100%;
+  }
+
+  &__nav {
+    margin-top: 29px;
+    padding: 0px 3px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(11px, g.vw_sp(11), 18.7px);
+  }
+
+  &__menuItem {
+    //
+  }
+
+  &__menuLink {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3px, g.vw_sp(3), 5.1px);
+    font-family: var(--mincho);
+    font-size: clamp(25px, g.vw_sp(25), 42.5px);
+    line-height: 1;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--brawn);
+  }
+  
+  &__subText {
+    display: block;
+    font-size: 0.4em;
+    letter-spacing: 0.2em;
+  }
+
+  &__linkBox {
+    margin-top: 18px;
+  }
+}
